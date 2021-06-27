@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Star animation</title>
+  <style>
+    body {
+      background-color: #0c002b;
+      margin: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 300px;
+      height: 290px;
+      top: 50%;
+      left: 50%;
+      /* border: 2px solid red; */
+      overflow: hidden;
+    }
+
+    .star span:nth-child(1) {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 300px;
+      height: 2px;
+      background: linear-gradient(90deg, #0c002b, #1779ff);
+      animation: animate1 2s linear infinite;
+    }
+
+    @keyframes animate1 {
+      0% {
+        transform: translate(-100%);
+      }
+
+      100% {
+        transform: translate(100%);
+      }
+    }
+
+
+
+    .star span:nth-child(2) {
+      position: absolute;
+      top: 100px;
+      right: 0px;
+      width: 2px;
+      height: 300px;
+      background: linear-gradient(127deg, #0c002b, #1779ff);
+      animation: animate2 2s linear infinite;
+      transform-origin: top;
+      transform: rotateZ(53deg);
+      animation-delay: 1s;
+    }
+
+    @keyframes animate2 {
+      0% {
+        top: -125px;
+        right: -100%;
+      }
+
+      100% {
+        top: 101%;
+        right: 80%;
+      }
+    }
+
+    .star span:nth-child(3) {
+      position: absolute;
+      bottom: 8px;
+      left: 58px;
+      width: 300px;
+      height: 2px;
+      background: linear-gradient(18deg, #0c002b, #1779ff);
+      animation: animate3 2s linear infinite;
+      transform-origin: left;
+      transform: rotateZ(-72deg);
+      animation-delay: 2s;
+    }
+
+    @keyframes animate3 {
+      0% {
+        bottom: -100%;
+        left: -35px;
+      }
+
+      100% {
+        bottom: 100%;
+        left: 150px;
+      }
+    }
+
+
+    .star span:nth-child(4) {
+      position: absolute;
+      top: -5px;
+      left: 150px;
+      width: 2px;
+      height: 300px;
+      background: linear-gradient(72deg, #1779ff, #0c002b);
+      animation: animate4 2s linear infinite;
+      transform-origin: top;
+      transform: rotateZ(-18deg);
+      animation-delay: 1s;
+    }
+
+    @keyframes animate4 {
+      0% {
+        top: -100%;
+        left: 58px;
+      }
+
+      100% {
+        top: 100%;
+        left: 245px;
+      }
+    }
+
+    .star span:nth-child(5) {
+      position: absolute;
+      bottom: 20px;
+      left: -70px;
+      width: 300px;
+      height: 2px;
+      background: linear-gradient(54deg, #1779ff, #0c002b);
+      animation: animate5 2s linear infinite;
+      transform-origin: right;
+      transform: rotateZ(36deg);
+      animation-delay: 2s;
+    }
+
+    @keyframes animate5 {
+      0% {
+        bottom: -80%;
+        left: 260px;
+      }
+
+      100% {
+        bottom: 100%;
+        left: -150%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="star">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</body>
+
+</html>
